@@ -29,7 +29,9 @@ npm run start
 ```
 5. 运行成功的标志是项目目录下的 `logs\app.log` 文件中出现 `Login success` 字样。
 
+### 👌备注
 
+- 关于chromePath的获取：在Chrome浏览器中输入 `chrome://version/` ，找到 `可执行文件路径` 即为 `chromePath` 。在Windows系统中，需要将路径中的 `\` 替换为 `\\` 。
 
 
 
