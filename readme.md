@@ -27,7 +27,7 @@ npm install
 ```shell
 npm run start
 ```
-5. 运行成功的标志是项目目录下的 `logs\app.log` 文件中出现 `登录成功` 字样。
+5. 运行成功的标志是项目目录下的 `logs\app.log` 文件中出现 `Login success` 字样。
 
 
 
