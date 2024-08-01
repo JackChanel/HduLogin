@@ -1,7 +1,7 @@
 const puppeteer = require("puppeteer");
 const schedule = require("node-schedule");
 const winston = require("winston");
-const { username, password } = require("./config.json");
+const { username, password, chromePath } = require("./config.json");
 
 const logger = winston.createLogger({
   level: "info",
@@ -32,6 +32,7 @@ async function sleep(time) {
 async function run() {
   const browser = await puppeteer.launch({
     headless: false,
+    executablePath: chromePath,
   });
   const page = await browser.newPage("https://login.hdu.edu.cn/srun_portal_pc");
   registerListener(page, browser);
