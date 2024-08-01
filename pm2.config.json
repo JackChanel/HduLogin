@@ -1,0 +1,23 @@
+{
+  "apps": [
+    {
+      "name": "hdulogin",
+      "exec_interpreter": "node",
+      "script": "main.js",
+      "cwd": "./",
+      "exec_mode": "fork",
+      "max_memory_restart": "1G",
+      "autorestart": true,
+      "node_args": [],
+      "watch": false,
+      "error_file": "./logs/test-err.log",
+      "out_file": "./logs/test-out.log",
+      "pid_file": "./logs/test.pid",
+      "env": {
+        "NODE_ENV": "development"
+      },
+      "min_uptime": "60s",
+      "max_restarts": 30
+    }
+  ]
+}
