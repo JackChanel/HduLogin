@@ -31,7 +31,7 @@ async function sleep(time) {
 
 async function run() {
   const browser = await puppeteer.launch({
-    headless: false,
+    headless: true,
     executablePath: chromePath,
   });
   const page = await browser.newPage("https://login.hdu.edu.cn/srun_portal_pc");
@@ -77,8 +77,13 @@ function registerListener(page, browser) {
   });
 }
 
-// refresh every 6 hours
+// quick-start
 run();
+// preserve-start
+setTimeout(() => {
+  run();
+}, 5 * 60 * 1000);
+// refresh every 6 hours
 schedule.scheduleJob("0 */6 * * *", function () {
   logger.info("开始登录");
   run();
