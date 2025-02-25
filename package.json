@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node startup.js -m=install",
-    "uninstall": "node startup.js -m=uninstall"
+    "uninstall": "node startup.js -m=uninstall",
+    "ubuntu":"node ./ubuntu/main.js"
   },
   "repository": {
     "type": "git",
